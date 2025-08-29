@@ -1,8 +1,7 @@
 <template>
-       
+           <Navbar :logo="logo_src" :alt="app_name"/>
         <RouterView />
-        <Navbar/>
-         <Footer/>
+             <Footer/>
 </template>
 <script>
 import Navbar from './components/Navbar.vue';
@@ -14,6 +13,12 @@ import Footer from './components/Footer.vue';
         Footer
         
 
+    },
+    data(){
+      return{
+        logo_src: "/img/logo.png",
+        app_name: "Faça seu burguer"
+      }
     }
   }
 </script>
